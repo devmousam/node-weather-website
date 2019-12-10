@@ -2,6 +2,7 @@ const path = require('path')
 const express = require('express')
 const app = express()
 const hbs = require('hbs')
+const port = process.env.PORT || 3000
 
 // Express path configuration
 const staticPath = path.join(__dirname, '../public')
@@ -43,6 +44,6 @@ app.use(express.static(staticPath))
 
 
 // server configuration
-app.listen('3000', () => {
-    console.log('Server started')
+app.listen(port, () => {
+    console.log('Server started' . port)
 })
